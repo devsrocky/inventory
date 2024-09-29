@@ -7,6 +7,7 @@ const ListService = require('../../service/common/ListService')
 const UpdateService = require('../../service/common/UpdateService')
 const CheckAssociation = require('../../service/common/CheckAssociation')
 const DeleteService = require('../../service/common/DeleteService')
+const DetailsByIdService = require('../../service/common/DetailsByIdService')
 
 
 exports.CreateBrand = async (req, res) => {

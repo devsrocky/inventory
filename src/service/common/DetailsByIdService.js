@@ -10,7 +10,7 @@ const DetailsByIdService = async (Request, DataModel) => {
         const ObjectId = mongoose.Types.ObjectId;
 
         let QueryObject = {}
-        QueryObject['_id'] = ObjectId(id)
+        QueryObject['_id'] = new ObjectId(id)
         QueryObject['UserEmail'] = UserEmail
 
         let data = await DataModel.aggregate([
@@ -23,3 +23,5 @@ const DetailsByIdService = async (Request, DataModel) => {
         return {status: 'failed', data: err.toString()}
     }
 }
+
+module.exports = DetailsByIdService

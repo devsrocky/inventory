@@ -7,6 +7,7 @@ const ListService = require('../../service/common/ListService');
 const UpdateService = require('../../service/common/UpdateService');
 const CheckAssociation = require('../../service/common/CheckAssociation');
 const DeleteService = require('../../service/common/DeleteService');
+const DetailsByIdService = require('../../service/common/DetailsByIdService');
 
 exports.createCategory = async (req, res) => {
     let data = await CreateService(req, DataModel);
@@ -42,4 +43,9 @@ exports.deleteCategory = async (req, res) => {
         let deleted = await DeleteService(req, DataModel)
         res.status(200).json({status: 'success', data: deleted})
     }
+}
+
+exports.CategoryDetailsById = async (req, res) => {
+    let data = await DetailsByIdService(req, DataModel)
+    res.status(200).json(data)
 }

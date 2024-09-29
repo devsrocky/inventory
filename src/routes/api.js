@@ -47,6 +47,7 @@ router.post("/updateCategory/:id", Authverification, categoryController.updateCa
 router.get("/DropDownCategory", Authverification, categoryController.DropDownCategory)
 router.get("/CategoryList/:pageNo/:perPage/:keyword", Authverification, categoryController.CategoryList)
 router.get('/deleteCategory/:id', Authverification, categoryController.deleteCategory)
+router.get('/CategoryDetailsById/:id', Authverification, categoryController.CategoryDetailsById)
 
 // suplier
 router.post("/createSupplier", Authverification, supplierController.createSupplier)
