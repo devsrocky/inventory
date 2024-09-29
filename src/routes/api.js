@@ -39,6 +39,7 @@ router.post("/UpdateBrand/:id", Authverification, BrandController.UpdateBrand)
 router.get("/DropDownBrand", Authverification, BrandController.DropDownBrand)
 router.get("/BrandList/:pageNo/:perPage/:keyword", Authverification, BrandController.BrandList)
 router.get("/deleteBrand/:id", Authverification, BrandController.deleteBrand)
+router.get("/brandDetailsById/:id", Authverification, BrandController.brandDetailsById)
 
 // category
 router.post("/createCategory", Authverification, categoryController.createCategory)

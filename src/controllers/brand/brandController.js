@@ -46,3 +46,8 @@ exports.deleteBrand = async (req, res) => {
     }
     
 }
+
+exports.brandDetailsById = async (req, res) => {
+    let data = await DetailsByIdService(req, DataModel)
+    res.status(200).json(data)
+}
